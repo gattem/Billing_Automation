@@ -3,143 +3,383 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billing Automation</title>
+  <title>Billing Automation Dashboard</title>
   <style>
-    body { font-family: Inter, system-ui, sans-serif; margin: 0; color: #1f2937; background: #eef2ff; }
-    .page { max-width: 1200px; margin: auto; padding: 32px; }
-    .hero { background: white; border-radius: 24px; padding: 36px; box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08); }
-    h1 { margin-top: 0; font-size: clamp(2rem, 4vw, 3rem); }
-    p { line-height: 1.75; }
-    .grid { display: grid; gap: 24px; margin-top: 28px; }
-    .card { background: white; border: 1px solid #e5e7eb; border-radius: 18px; padding: 24px; }
-    .section-title { margin-bottom: 16px; font-size: 1.1rem; font-weight: 700; }
-    .step-list { list-style: none; padding: 0; margin: 0; }
-    .step-list li { margin-bottom: 14px; padding-left: 34px; position: relative; }
-    .step-list li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 20px; height: 20px; border-radius: 50%; background: #4f46e5; }
-    .wireframe { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .wireframe-block { border: 1px solid #cbd5e1; border-radius: 16px; background: #f8fafc; padding: 18px; min-height: 160px; }
-    .wireframe-block h3 { margin-top: 0; font-size: 1rem; }
-    .code { background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre-wrap; }
-    .note { color: #4b5563; margin-top: 12px; }
-    .form-prototype { border: 1px solid #d1d5db; border-radius: 18px; background: #ffffff; padding: 24px; margin-top: 20px; }
-    .form-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .form-panel { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; }
-    .form-panel h3 { margin-top: 0; margin-bottom: 16px; font-size: 1rem; }
-    .form-panel label { display: block; margin-bottom: 6px; color: #4b5563; font-size: 0.95rem; }
-    .form-panel input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: #f8fafc; color: #111827; margin-bottom: 16px; }
-    .form-panel input[readonly] { color: #6b7280; }
-    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
-    .button-row button { border: none; border-radius: 12px; padding: 12px 20px; font-size: 0.95rem; cursor: pointer; background: #4338ca; color: white; transition: transform 0.15s ease, background 0.15s ease; }
-    .button-row button:hover { transform: translateY(-1px); background: #3730a3; }
+    :root {
+      color-scheme: light;
+      font-family: Inter, system-ui, sans-serif;
+      background: #eef2ff;
+      color: #111827;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 50%, #dbeafe 100%);
+    }
+
+    .page {
+      width: min(1200px, calc(100% - 40px));
+      margin: auto;
+      padding: 36px 0 60px;
+    }
+
+    .hero {
+      padding: 40px 36px;
+      border-radius: 32px;
+      background: radial-gradient(circle at top left, rgba(99, 102, 241, 0.14), transparent 34%),
+                  linear-gradient(180deg, rgba(255,255,255,0.92), rgba(248,250,252,0.95));
+      border: 1px solid rgba(148,163,184,0.22);
+      box-shadow: 0 32px 90px rgba(15, 23, 42, 0.08);
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: clamp(2.4rem, 4vw, 3.8rem);
+      line-height: 1.03;
+      letter-spacing: -0.03em;
+    }
+
+    .hero p {
+      margin: 20px 0 0;
+      max-width: 760px;
+      font-size: 1rem;
+      color: #475569;
+      line-height: 1.8;
+    }
+
+    .hero-grid {
+      display: grid;
+      gap: 18px;
+      margin-top: 32px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .status-card {
+      border-radius: 22px;
+      background: white;
+      border: 1px solid #e2e8f0;
+      padding: 24px;
+      min-height: 170px;
+    }
+
+    .status-card h2 {
+      margin-top: 0;
+      font-size: 1.05rem;
+    }
+
+    .status-card p {
+      color: #475569;
+      margin: 12px 0 0;
+      font-size: 0.98rem;
+      line-height: 1.7;
+    }
+
+    .status-chip {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #3730a3;
+      font-weight: 600;
+      margin-top: 16px;
+    }
+
+    .status-chip span {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: #4338ca;
+    }
+
+    .note-block {
+      margin-top: 18px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 18px;
+      color: #475569;
+      line-height: 1.75;
+    }
+
+    .card {
+      background: white;
+      border-radius: 24px;
+      padding: 28px;
+      border: 1px solid rgba(148,163,184,0.22);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.05);
+    }
+
+    .section-title {
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .wireframe {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .wireframe-block {
+      background: #f8fafc;
+      border-radius: 18px;
+      border: 1px dashed #cbd5e1;
+      padding: 22px;
+      min-height: 180px;
+    }
+
+    .wireframe-block h3 {
+      margin-top: 0;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .wireframe-block p {
+      color: #475569;
+      line-height: 1.8;
+    }
+
+    .form-prototype {
+      display: grid;
+      gap: 22px;
+    }
+
+    .form-grid {
+      display: grid;
+      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .form-panel {
+      background: #f8fafc;
+      border-radius: 22px;
+      border: 1px solid #e2e8f0;
+      padding: 26px;
+    }
+
+    .form-panel h3 {
+      margin-top: 0;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-size: 0.92rem;
+      color: #475569;
+    }
+
+    input {
+      width: 100%;
+      border: 1px solid #cbd5e1;
+      border-radius: 14px;
+      padding: 12px 14px;
+      background: #ffffff;
+      color: #0f172a;
+      margin-bottom: 16px;
+      font-size: 0.95rem;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .button-row button {
+      border: none;
+      border-radius: 14px;
+      padding: 14px 20px;
+      min-width: 168px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(135deg, #4338ca, #6366f1);
+      box-shadow: 0 18px 30px rgba(67, 56, 202, 0.2);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .button-row button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 24px 40px rgba(67, 56, 202, 0.24);
+    }
+
+    .task-grid {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    }
+
+    .task-card {
+      padding: 22px;
+      border-radius: 22px;
+      border: 1px solid #e2e8f0;
+      background: linear-gradient(180deg, rgba(255,255,255,0.98), #f8fafc);
+    }
+
+    .task-card h3 {
+      margin-top: 0;
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .task-card p {
+      margin: 0 0 12px;
+      color: #475569;
+      line-height: 1.75;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: #e0e7ff;
+      color: #3730a3;
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .footer {
+      margin-top: 40px;
+      text-align: center;
+      color: #475569;
+      font-size: 0.95rem;
+    }
+
+    .footer a {
+      color: #4338ca;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
   <main class="page">
     <section class="hero">
-      <h1>Billing Automation UI Preview</h1>
-      <p>Use this page as a landing page for the repo and as a guide for what the UI should show. The repo is a Java backend scaffold today; this page describes the operator workflow and what a future frontend should include.</p>
-      <div class="grid">
-        <div class="card">
-          <h2>GitHub Pages status</h2>
-          <p>Enable Pages from the repo settings using <strong>main</strong> branch and <strong>/docs</strong> folder.</p>
-          <p class="note">If you see a 404, GitHub Pages may still be publishing. Refresh after a minute.</p>
-          <div class="code">https://gattem.github.io/Billing_Automation/</div>
+      <h1>Billing Automation Dashboard</h1>
+      <p>A lightweight mockup and status page for the Billing Automation project. This page shows how the UI can look, what tasks it supports, and how the backend connects to your local Couchbase instance.</p>
+
+      <div class="hero-grid">
+        <div class="status-card">
+          <h2>Page preview</h2>
+          <p>Static mockup for the operator workflow. This page is hosted from the repo’s <strong>docs/</strong> folder.</p>
+          <div class="status-chip"><span></span>Ready to publish</div>
         </div>
-        <div class="card">
-          <h2>Local Couchbase config</h2>
-          <div class="code">couchbase.host=localhost
-couchbase.bucket=sessiondb_billing
-couchbase.username=mahesh
-couchbase.password=admin123</div>
-          <p class="note">These values are now included in the Spring Boot config so the backend can connect to your local Couchbase host.</p>
+        <div class="status-card">
+          <h2>Local database</h2>
+          <p>Backend is configured to use your local Couchbase instance:</p>
+          <div class="code">host: localhost
+bucket: sessiondb_billing
+user: mahesh</div>
+        </div>
+        <div class="status-card">
+          <h2>Publishing</h2>
+          <p>If the page is still 404, verify the Pages settings and refresh after a minute.</p>
+          <div class="status-chip"><span></span>GitHub Pages pending</div>
         </div>
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">What the automation UI should show</h2>
-      <div class="wireframe">
-        <div class="wireframe-block">
-          <h3>1. Input form</h3>
-          <p>Account ID, month/year, bill date, due date, from/to dates, bill generation IP, invoice IP, scenario type.</p>
+      <div class="section-title">Task overview</div>
+      <div class="task-grid">
+        <div class="task-card">
+          <h3>Scenario 1: Pre-final bill</h3>
+          <p>Validate adjustments, back up the test bill doc, generate a test bill, and then create a final bill without email.</p>
+          <div class="badge">Input validation</div>
         </div>
-        <div class="wireframe-block">
-          <h3>2. Pre-checks panel</h3>
-          <p>Document existence, final bill state, test bill backup, cancelled lines, installment session, payment flags.</p>
+        <div class="task-card">
+          <h3>Scenario 2: Cancelled line recovery</h3>
+          <p>Restore cancelled line records, adjust recurring charges and counters, reset billing flags, then rerun the test and final bill flow.</p>
+          <div class="badge">Document repair</div>
         </div>
-        <div class="wireframe-block">
-          <h3>3. Action checklist</h3>
-          <p>Step-by-step operator actions with status badges for Pending / Running / Done / Failed.</p>
+        <div class="task-card">
+          <h3>Scenario 3: Installment handling</h3>
+          <p>Update installment mapping, decrement counters safely, rerun billing, and reconcile future payment records.</p>
+          <div class="badge">Installment support</div>
         </div>
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">Prototype screen</h2>
+      <div class="section-title">Prototype UI</div>
       <div class="form-prototype">
         <div class="form-grid">
           <div class="form-panel">
-            <h3>Billing details</h3>
+            <h3>Account and billing</h3>
             <label>Account ID</label>
             <input value="111100000339" readonly />
             <label>Month-Year</label>
             <input value="0326" readonly />
-            <label>Bill Date</label>
+            <label>Bill date</label>
             <input value="2026-04-05" readonly />
-            <label>Bill Due Date</label>
+            <label>Bill due date</label>
             <input value="2026-04-25" readonly />
           </div>
           <div class="form-panel">
-            <h3>System settings</h3>
-            <label>From Date</label>
+            <h3>Billing system</h3>
+            <label>From date</label>
             <input value="2026-03-01" readonly />
-            <label>To Date</label>
+            <label>To date</label>
             <input value="2026-03-31" readonly />
-            <label>Bill Gen IP</label>
+            <label>Bill generation IP</label>
             <input value="http://localhost:8088" readonly />
-            <label>Invoice IP</label>
+            <label>Invoice service IP</label>
             <input value="http://localhost:8090" readonly />
           </div>
         </div>
         <div class="button-row">
-          <button type="button">Load Scenario</button>
-          <button type="button">Run Pre-checks</button>
-          <button type="button">Generate Test Bill</button>
-          <button type="button">Generate Final Bill</button>
+          <button type="button">Load scenario</button>
+          <button type="button">Run pre-checks</button>
+          <button type="button">Generate test bill</button>
+          <button type="button">Generate final bill</button>
         </div>
       </div>
     </section>
 
-    <section class="grid">
-      <div class="card">
-        <h2 class="section-title">Scenario flow</h2>
-        <ul class="step-list">
-          <li>Prepare customer and billing IDs.</li>
-          <li>Read sample Couchbase docs and validate current state.</li>
-          <li>Run test bill generation via billing API.</li>
-          <li>Validate output, then trigger final bill.</li>
-          <li>Preview invoice using invoice API.</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h2 class="section-title">Key UI actions</h2>
-        <ul class="step-list">
-          <li>Load scenario</li>
-          <li>Run pre-checks</li>
-          <li>Generate test bill</li>
-          <li>Generate final bill</li>
-          <li>Create invoice preview</li>
-        </ul>
+    <section class="card">
+      <div class="section-title">User workflow</div>
+      <div class="wireframe">
+        <div class="wireframe-block">
+          <h3>Input capture</h3>
+          <p>Collect all required billing metadata and IP endpoints in a single form, then validate the account state before any action.</p>
+        </div>
+        <div class="wireframe-block">
+          <h3>Pre-checks</h3>
+          <p>Show current Couchbase document status: adjustments, UBL docs, bills, cancelled lines, and installment flags.</p>
+        </div>
+        <div class="wireframe-block">
+          <h3>Run actions</h3>
+          <p>Allow the operator to trigger test bill, final bill, invoice preview, and document repair steps with clear status feedback.</p>
+        </div>
       </div>
     </section>
 
     <section class="card">
-      <h2 class="section-title">Backend / UI integration</h2>
-      <p>The backend exposes REST endpoints that a frontend can call. The first UI version should be a simple Java-served page or a static SPA that uses these endpoints.</p>
+      <div class="section-title">API and backend</div>
+      <p>The Java backend exposes the first endpoints for the UI to consume. This page is a static frontend mockup, but the backend can be extended with live Couchbase access and real billing triggers.</p>
       <div class="code">GET /api/v1/billing/health
 POST /api/v1/billing/precheck
 POST /api/v1/billing/scenario/run</div>
     </section>
+
+    <footer class="footer">
+      Built for Billing Automation demo. Use this page as a prototype while we add live backend integration.
+    </footer>
   </main>
 </body>
 </html>
