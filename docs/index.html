@@ -5,44 +5,141 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Billing Automation</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 40px; color: #222; background: #f8f9fb; }
-    .container { max-width: 900px; margin: auto; padding: 24px; background: #fff; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.08); }
-    h1 { margin-top: 0; }
-    a { color: #0366d6; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .card { border: 1px solid #e1e4e8; border-radius: 10px; padding: 18px; margin: 18px 0; background: #fcfdff; }
-    .code { background: #f6f8fa; border: 1px solid #e1e4e8; padding: 10px 14px; border-radius: 6px; display: block; white-space: pre-wrap; font-family: monospace; }
+    body { font-family: Inter, system-ui, sans-serif; margin: 0; color: #1f2937; background: #eef2ff; }
+    .page { max-width: 1200px; margin: auto; padding: 32px; }
+    .hero { background: white; border-radius: 24px; padding: 36px; box-shadow: 0 18px 50px rgba(15, 23, 42, 0.08); }
+    h1 { margin-top: 0; font-size: clamp(2rem, 4vw, 3rem); }
+    p { line-height: 1.75; }
+    .grid { display: grid; gap: 24px; margin-top: 28px; }
+    .card { background: white; border: 1px solid #e5e7eb; border-radius: 18px; padding: 24px; }
+    .section-title { margin-bottom: 16px; font-size: 1.1rem; font-weight: 700; }
+    .step-list { list-style: none; padding: 0; margin: 0; }
+    .step-list li { margin-bottom: 14px; padding-left: 34px; position: relative; }
+    .step-list li::before { content: ""; position: absolute; left: 0; top: 0.5rem; width: 20px; height: 20px; border-radius: 50%; background: #4f46e5; }
+    .wireframe { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .wireframe-block { border: 1px solid #cbd5e1; border-radius: 16px; background: #f8fafc; padding: 18px; min-height: 160px; }
+    .wireframe-block h3 { margin-top: 0; font-size: 1rem; }
+    .code { background: #f8fafc; border: 1px solid #e2e8f0; padding: 16px; border-radius: 12px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace; white-space: pre-wrap; }
+    .note { color: #4b5563; margin-top: 12px; }
+    .form-prototype { border: 1px solid #d1d5db; border-radius: 18px; background: #ffffff; padding: 24px; margin-top: 20px; }
+    .form-grid { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+    .form-panel { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 20px; }
+    .form-panel h3 { margin-top: 0; margin-bottom: 16px; font-size: 1rem; }
+    .form-panel label { display: block; margin-bottom: 6px; color: #4b5563; font-size: 0.95rem; }
+    .form-panel input { width: 100%; padding: 10px 12px; border: 1px solid #cbd5e1; border-radius: 10px; background: #f8fafc; color: #111827; margin-bottom: 16px; }
+    .form-panel input[readonly] { color: #6b7280; }
+    .button-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 18px; }
+    .button-row button { border: none; border-radius: 12px; padding: 12px 20px; font-size: 0.95rem; cursor: pointer; background: #4338ca; color: white; transition: transform 0.15s ease, background 0.15s ease; }
+    .button-row button:hover { transform: translateY(-1px); background: #3730a3; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Billing Automation</h1>
-    <p>This repository is now ready for GitHub Pages from the <strong>docs/</strong> folder.</p>
-    <div class="card">
-      <h2>Project status</h2>
-      <ul>
-        <li>Backend scaffold in <code>src/main/java</code></li>
-        <li>Sample Couchbase documents in <code>sample_couchbase_docs/</code></li>
-        <li>Static GitHub Pages site in <code>docs/index.html</code></li>
-      </ul>
-    </div>
-    <div class="card">
-      <h2>Enable GitHub Pages</h2>
-      <p>To view this site, enable GitHub Pages for the repo using:</p>
-      <div class="code">Branch: <strong>main</strong>
-Folder: <strong>/docs</strong></div>
-      <p>Then the site will be available at:</p>
-      <div class="code">https://gattem.github.io/Billing_Automation/</div>
-    </div>
-    <div class="card">
-      <h2>Next steps</h2>
-      <ol>
-        <li>Open the GitHub repo settings.</li>
-        <li>Locate Pages.</li>
-        <li>Set source to <strong>main</strong> branch and <strong>/docs</strong> folder.</li>
-        <li>Save and wait for the site to publish.</li>
-      </ol>
-    </div>
-  </div>
+  <main class="page">
+    <section class="hero">
+      <h1>Billing Automation UI Preview</h1>
+      <p>Use this page as a landing page for the repo and as a guide for what the UI should show. The repo is a Java backend scaffold today; this page describes the operator workflow and what a future frontend should include.</p>
+      <div class="grid">
+        <div class="card">
+          <h2>GitHub Pages status</h2>
+          <p>Enable Pages from the repo settings using <strong>main</strong> branch and <strong>/docs</strong> folder.</p>
+          <p class="note">If you see a 404, GitHub Pages may still be publishing. Refresh after a minute.</p>
+          <div class="code">https://gattem.github.io/Billing_Automation/</div>
+        </div>
+        <div class="card">
+          <h2>Local Couchbase config</h2>
+          <div class="code">couchbase.host=localhost
+couchbase.bucket=sessiondb_billing
+couchbase.username=mahesh
+couchbase.password=admin123</div>
+          <p class="note">These values are now included in the Spring Boot config so the backend can connect to your local Couchbase host.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">What the automation UI should show</h2>
+      <div class="wireframe">
+        <div class="wireframe-block">
+          <h3>1. Input form</h3>
+          <p>Account ID, month/year, bill date, due date, from/to dates, bill generation IP, invoice IP, scenario type.</p>
+        </div>
+        <div class="wireframe-block">
+          <h3>2. Pre-checks panel</h3>
+          <p>Document existence, final bill state, test bill backup, cancelled lines, installment session, payment flags.</p>
+        </div>
+        <div class="wireframe-block">
+          <h3>3. Action checklist</h3>
+          <p>Step-by-step operator actions with status badges for Pending / Running / Done / Failed.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Prototype screen</h2>
+      <div class="form-prototype">
+        <div class="form-grid">
+          <div class="form-panel">
+            <h3>Billing details</h3>
+            <label>Account ID</label>
+            <input value="111100000339" readonly />
+            <label>Month-Year</label>
+            <input value="0326" readonly />
+            <label>Bill Date</label>
+            <input value="2026-04-05" readonly />
+            <label>Bill Due Date</label>
+            <input value="2026-04-25" readonly />
+          </div>
+          <div class="form-panel">
+            <h3>System settings</h3>
+            <label>From Date</label>
+            <input value="2026-03-01" readonly />
+            <label>To Date</label>
+            <input value="2026-03-31" readonly />
+            <label>Bill Gen IP</label>
+            <input value="http://localhost:8088" readonly />
+            <label>Invoice IP</label>
+            <input value="http://localhost:8090" readonly />
+          </div>
+        </div>
+        <div class="button-row">
+          <button type="button">Load Scenario</button>
+          <button type="button">Run Pre-checks</button>
+          <button type="button">Generate Test Bill</button>
+          <button type="button">Generate Final Bill</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <div class="card">
+        <h2 class="section-title">Scenario flow</h2>
+        <ul class="step-list">
+          <li>Prepare customer and billing IDs.</li>
+          <li>Read sample Couchbase docs and validate current state.</li>
+          <li>Run test bill generation via billing API.</li>
+          <li>Validate output, then trigger final bill.</li>
+          <li>Preview invoice using invoice API.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h2 class="section-title">Key UI actions</h2>
+        <ul class="step-list">
+          <li>Load scenario</li>
+          <li>Run pre-checks</li>
+          <li>Generate test bill</li>
+          <li>Generate final bill</li>
+          <li>Create invoice preview</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="section-title">Backend / UI integration</h2>
+      <p>The backend exposes REST endpoints that a frontend can call. The first UI version should be a simple Java-served page or a static SPA that uses these endpoints.</p>
+      <div class="code">GET /api/v1/billing/health
+POST /api/v1/billing/precheck
+POST /api/v1/billing/scenario/run</div>
+    </section>
+  </main>
 </body>
 </html>
