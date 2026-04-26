@@ -262,11 +262,93 @@
       text-decoration: none;
     }
 
-    .footer a:hover {
-      text-decoration: underline;
+    .task-status-grid {
+      display: grid;
+      gap: 16px;
     }
-  </style>
-</head>
+
+    .task-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 18px;
+      border-radius: 16px;
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+    }
+
+    .task-info h4 {
+      margin: 0 0 4px 0;
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .task-info p {
+      margin: 0;
+      color: #64748b;
+      font-size: 0.9rem;
+    }
+
+    .task-status {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #cbd5e1;
+    }
+
+    .status-indicator.pending { background: #f59e0b; }
+    .status-indicator.running { background: #3b82f6; animation: pulse 2s infinite; }
+    .status-indicator.success { background: #10b981; }
+    .status-indicator.error { background: #ef4444; }
+
+    .status-text {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #475569;
+    }
+
+    .activity-log {
+      background: #f8fafc;
+      border-radius: 16px;
+      border: 1px solid #e2e8f0;
+      padding: 20px;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+
+    .log-entry {
+      display: flex;
+      gap: 12px;
+      padding: 8px 0;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .log-entry:last-child {
+      border-bottom: none;
+    }
+
+    .log-time {
+      font-size: 0.85rem;
+      color: #64748b;
+      font-family: ui-monospace, monospace;
+      min-width: 70px;
+    }
+
+    .log-message {
+      font-size: 0.9rem;
+      color: #374151;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.5; }
+    }
 <body>
   <main class="page">
     <section class="hero">
@@ -370,16 +452,239 @@ user: mahesh</div>
     </section>
 
     <section class="card">
-      <div class="section-title">API and backend</div>
-      <p>The Java backend exposes the first endpoints for the UI to consume. This page is a static frontend mockup, but the backend can be extended with live Couchbase access and real billing triggers.</p>
-      <div class="code">GET /api/v1/billing/health
-POST /api/v1/billing/precheck
-POST /api/v1/billing/scenario/run</div>
+      <div class="section-title">Task status</div>
+      <div class="task-status-grid">
+        <div class="task-item">
+          <div class="task-info">
+            <h4>Document validation</h4>
+            <p>Checking Couchbase documents and payment flags</p>
+          </div>
+          <div class="task-status">
+            <span class="status-indicator pending"></span>
+            <span class="status-text">Pending</span>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-info">
+            <h4>Test bill generation</h4>
+            <p>Creating test bill for validation</p>
+          </div>
+          <div class="task-status">
+            <span class="status-indicator idle"></span>
+            <span class="status-text">Ready</span>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-info">
+            <h4>Final bill generation</h4>
+            <p>Generating final bill without email</p>
+          </div>
+          <div class="task-status">
+            <span class="status-indicator idle"></span>
+            <span class="status-text">Ready</span>
+          </div>
+        </div>
+        <div class="task-item">
+          <div class="task-info">
+            <h4>Invoice preview</h4>
+            <p>Creating invoice preview for validation</p>
+          </div>
+          <div class="task-status">
+            <span class="status-indicator idle"></span>
+            <span class="status-text">Ready</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">Activity log</div>
+      <div class="activity-log">
+        <div class="log-entry">
+          <span class="log-time">14:32:15</span>
+          <span class="log-message">System initialized</span>
+        </div>
+        <div class="log-entry">
+          <span class="log-time">14:32:10</span>
+          <span class="log-message">Connected to Couchbase localhost</span>
+        </div>
+        <div class="log-entry">
+          <span class="log-time">14:32:05</span>
+          <span class="log-message">Billing automation dashboard loaded</span>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
       Built for Billing Automation demo. Use this page as a prototype while we add live backend integration.
     </footer>
-  </main>
-</body>
+    <script>
+      // Simulate live UI interactions
+      document.addEventListener('DOMContentLoaded', function() {
+        const buttons = document.querySelectorAll('.button-row button');
+        const statusChips = document.querySelectorAll('.status-chip');
+        const formInputs = document.querySelectorAll('input');
+
+        // Make inputs editable for demo
+        formInputs.forEach(input => {
+          input.removeAttribute('readonly');
+          input.addEventListener('input', function() {
+            this.style.borderColor = '#10b981';
+            setTimeout(() => this.style.borderColor = '#cbd5e1', 1000);
+          });
+        });
+
+        // Add click handlers to buttons
+        buttons.forEach(button => {
+          button.addEventListener('click', function() {
+            const action = this.textContent.toLowerCase().replace(' ', '-');
+            simulateAction(action, this);
+          });
+        });
+
+        // Update status chips periodically
+        setInterval(() => {
+          statusChips.forEach(chip => {
+            const statuses = ['Ready to publish', 'GitHub Pages pending', 'Backend connected'];
+            const randomStatus = statuses[Math.floor(Math.random() * statuses.length)];
+            chip.innerHTML = `<span></span>${randomStatus}`;
+          });
+        }, 5000);
+
+        function simulateAction(action, button) {
+          const originalText = button.textContent;
+          button.textContent = 'Processing...';
+          button.style.background = 'linear-gradient(135deg, #f59e0b, #d97706)';
+          button.disabled = true;
+
+          // Update task status
+          updateTaskStatus(action, 'running');
+
+          // Simulate API call
+          setTimeout(() => {
+            button.textContent = '✓ ' + originalText;
+            button.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+
+            // Update task status to success
+            updateTaskStatus(action, 'success');
+
+            // Add to activity log
+            addActivityLog(`${originalText} completed successfully`);
+
+            // Show success message
+            showNotification(`${originalText} completed successfully!`, 'success');
+
+            setTimeout(() => {
+              button.textContent = originalText;
+              button.style.background = 'linear-gradient(135deg, #4338ca, #6366f1)';
+              button.disabled = false;
+              updateTaskStatus(action, 'idle');
+            }, 2000);
+          }, 1500 + Math.random() * 2000);
+        }
+
+        function updateTaskStatus(action, status) {
+          const taskMap = {
+            'load-scenario': 'Document validation',
+            'run-pre-checks': 'Document validation',
+            'generate-test-bill': 'Test bill generation',
+            'generate-final-bill': 'Final bill generation'
+          };
+
+          const taskName = taskMap[action];
+          if (!taskName) return;
+
+          const taskItems = document.querySelectorAll('.task-item');
+          taskItems.forEach(item => {
+            const title = item.querySelector('h4').textContent;
+            if (title === taskName) {
+              const indicator = item.querySelector('.status-indicator');
+              const statusText = item.querySelector('.status-text');
+
+              indicator.className = 'status-indicator ' + status;
+              statusText.textContent = status.charAt(0).toUpperCase() + status.slice(1);
+            }
+          });
+        }
+
+        function addActivityLog(message) {
+          const log = document.querySelector('.activity-log');
+          const now = new Date();
+          const time = now.toLocaleTimeString('en-US', {
+            hour12: false,
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+          });
+
+          const entry = document.createElement('div');
+          entry.className = 'log-entry';
+          entry.innerHTML = `
+            <span class="log-time">${time}</span>
+            <span class="log-message">${message}</span>
+          `;
+
+          log.insertBefore(entry, log.firstChild);
+
+          // Keep only last 10 entries
+          const entries = log.querySelectorAll('.log-entry');
+          if (entries.length > 10) {
+            entries[entries.length - 1].remove();
+          }
+        }
+
+        function showNotification(message, type) {
+          const notification = document.createElement('div');
+          notification.className = `notification ${type}`;
+          notification.textContent = message;
+          notification.style.cssText = `
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: ${type === 'success' ? '#10b981' : '#ef4444'};
+            color: white;
+            padding: 16px 20px;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            z-index: 1000;
+            animation: slideIn 0.3s ease;
+          `;
+
+          document.body.appendChild(notification);
+
+          setTimeout(() => {
+            notification.style.animation = 'slideOut 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+          }, 3000);
+        }
+
+        // Add CSS animations
+        const style = document.createElement('style');
+        style.textContent = `
+          @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+          }
+          @keyframes slideOut {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+          }
+          .notification {
+            font-weight: 600;
+            font-size: 0.95rem;
+          }
+          .button-row button:disabled {
+            cursor: not-allowed;
+            opacity: 0.7;
+          }
+          .form-panel input:focus {
+            outline: none;
+            border-color: #4338ca;
+            box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.1);
+          }
+        `;
+        document.head.appendChild(style);
+      });
+    </script>
+  </body>
 </html>
