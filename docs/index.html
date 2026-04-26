@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Billing Automation Dashboard</title>
+  <title>Billing Execution Wizard</title>
   <style>
     :root {
       color-scheme: light;
@@ -349,175 +349,90 @@
       0%, 100% { opacity: 1; }
       50% { opacity: 0.5; }
     }
+  </style>
+</head>
 <body>
   <main class="page">
-    <section class="hero">
-      <h1>Billing Automation Dashboard</h1>
-      <p>A lightweight mockup and status page for the Billing Automation project. This page shows how the UI can look, what tasks it supports, and how the backend connects to your local Couchbase instance.</p>
+    <section class="card">
+      <div class="header-row">
+        <div>
+          <p style="margin:0;color:#64748b;font-size:0.9rem;">Asia/Tokyo (JST)</p>
+          <h1 style="margin: 8px 0 0; font-size:2rem;">Billing Execution Wizard</h1>
+          <p style="margin: 12px 0 0; color:#475569; max-width:740px;">A live workflow UI for billing operations. Trigger scenario checks, bill generation, and invoice validation from one screen.</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;">
+          <div style="border-radius:18px;padding:14px 18px;background:#f8fafc;border:1px solid #e2e8f0;">
+            <p style="margin:0;color:#64748b;font-size:0.85rem;">Execution ID</p>
+            <strong style="display:block;color:#0f172a;">EX-20260424-001</strong>
+          </div>
+          <div style="border-radius:18px;padding:14px 18px;background:#ecfdf5;border:1px solid #bbf7d0;">
+            <p style="margin:0;color:#166534;font-size:0.85rem;">Approval Status</p>
+            <strong style="display:block;color:#166534;">Approved</strong>
+          </div>
+        </div>
+      </div>
 
-      <div class="hero-grid">
-        <div class="status-card">
-          <h2>Page preview</h2>
-          <p>Static mockup for the operator workflow. This page is hosted from the repo’s <strong>docs/</strong> folder.</p>
-          <div class="status-chip"><span></span>Ready to publish</div>
-        </div>
-        <div class="status-card">
-          <h2>Local database</h2>
-          <p>Backend is configured to use your local Couchbase instance:</p>
-          <div class="code">host: localhost
-bucket: sessiondb_billing
-user: mahesh</div>
-        </div>
-        <div class="status-card">
-          <h2>Publishing</h2>
-          <p>If the page is still 404, verify the Pages settings and refresh after a minute.</p>
-          <div class="status-chip"><span></span>GitHub Pages pending</div>
-        </div>
+      <div class="wizard-bar">
+        <div class="step-pill completed"><div class="step-number">1</div><h4>Input & Validate</h4><p>Completed</p></div>
+        <div class="step-pill completed"><div class="step-number">2</div><h4>Scenario & Preview</h4><p>Completed</p></div>
+        <div class="step-pill completed"><div class="step-number">3</div><h4>Approval</h4><p>Completed</p></div>
+        <div class="step-pill active"><div class="step-number">4</div><h4>Execution</h4><p>In Progress</p></div>
+        <div class="step-pill"><div class="step-number">5</div><h4>Summary</h4><p>Pending</p></div>
       </div>
     </section>
 
-    <section class="card">
-      <div class="section-title">Task overview</div>
+    <section class="card" style="margin-top:24px;">
+      <div class="details-grid">
+        <div class="field-block"><label>Account ID</label><span>99887766</span></div>
+        <div class="field-block"><label>Month / Year</label><span>0426 (Apr 2026)</span></div>
+        <div class="field-block"><label>Bill Date</label><span>24 Apr 2026</span></div>
+        <div class="field-block"><label>Bill Due Date</label><span>26 May 2026</span></div>
+        <div class="field-block"><label>From Date</label><span>01 Apr 2026</span></div>
+        <div class="field-block"><label>To Date</label><span>30 Apr 2026</span></div>
+      </div>
+      <div class="button-row" style="margin-top:24px;">
+        <button type="button">Load scenario</button>
+        <button type="button">Run pre-checks</button>
+        <button type="button">Generate test bill</button>
+        <button type="button">Generate final bill</button>
+      </div>
+    </section>
+
+    <section class="card" style="margin-top:24px;">
       <div class="task-grid">
-        <div class="task-card">
-          <h3>Scenario 1: Pre-final bill</h3>
-          <p>Validate adjustments, back up the test bill doc, generate a test bill, and then create a final bill without email.</p>
-          <div class="badge">Input validation</div>
-        </div>
-        <div class="task-card">
-          <h3>Scenario 2: Cancelled line recovery</h3>
-          <p>Restore cancelled line records, adjust recurring charges and counters, reset billing flags, then rerun the test and final bill flow.</p>
-          <div class="badge">Document repair</div>
-        </div>
-        <div class="task-card">
-          <h3>Scenario 3: Installment handling</h3>
-          <p>Update installment mapping, decrement counters safely, rerun billing, and reconcile future payment records.</p>
-          <div class="badge">Installment support</div>
-        </div>
+        <div class="task-card"><h3>Scenario 2: Cancelled line recovery</h3><p>Restore cancelled line records, adjust recurring charges & counters, then rerun billing for final bill generation.</p><div class="badge">Document repair</div></div>
+        <div class="task-card"><h3>Adjustment summary</h3><p>Adjustment tax: 18% • Credit amount: 2,500.00 • Manual discount applied.</p><div class="badge">Approved</div></div>
+        <div class="task-card"><h3>Approval status</h3><p>BU Manager sign-off complete. Ready to proceed with test and final bill flows.</p><div class="badge">BU approved</div></div>
       </div>
     </section>
 
-    <section class="card">
-      <div class="section-title">Prototype UI</div>
-      <div class="form-prototype">
-        <div class="form-grid">
-          <div class="form-panel">
-            <h3>Account and billing</h3>
-            <label>Account ID</label>
-            <input value="111100000339" readonly />
-            <label>Month-Year</label>
-            <input value="0326" readonly />
-            <label>Bill date</label>
-            <input value="2026-04-05" readonly />
-            <label>Bill due date</label>
-            <input value="2026-04-25" readonly />
-          </div>
-          <div class="form-panel">
-            <h3>Billing system</h3>
-            <label>From date</label>
-            <input value="2026-03-01" readonly />
-            <label>To date</label>
-            <input value="2026-03-31" readonly />
-            <label>Bill generation IP</label>
-            <input value="http://localhost:8088" readonly />
-            <label>Invoice service IP</label>
-            <input value="http://localhost:8090" readonly />
-          </div>
-        </div>
-        <div class="button-row">
-          <button type="button">Load scenario</button>
-          <button type="button">Run pre-checks</button>
-          <button type="button">Generate test bill</button>
-          <button type="button">Generate final bill</button>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="section-title">User workflow</div>
-      <div class="wireframe">
-        <div class="wireframe-block">
-          <h3>Input capture</h3>
-          <p>Collect all required billing metadata and IP endpoints in a single form, then validate the account state before any action.</p>
-        </div>
-        <div class="wireframe-block">
-          <h3>Pre-checks</h3>
-          <p>Show current Couchbase document status: adjustments, UBL docs, bills, cancelled lines, and installment flags.</p>
-        </div>
-        <div class="wireframe-block">
-          <h3>Run actions</h3>
-          <p>Allow the operator to trigger test bill, final bill, invoice preview, and document repair steps with clear status feedback.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="section-title">Task status</div>
-      <div class="task-status-grid">
-        <div class="task-item">
-          <div class="task-info">
-            <h4>Document validation</h4>
-            <p>Checking Couchbase documents and payment flags</p>
-          </div>
-          <div class="task-status">
-            <span class="status-indicator pending"></span>
-            <span class="status-text">Pending</span>
-          </div>
-        </div>
-        <div class="task-item">
-          <div class="task-info">
-            <h4>Test bill generation</h4>
-            <p>Creating test bill for validation</p>
-          </div>
-          <div class="task-status">
-            <span class="status-indicator idle"></span>
-            <span class="status-text">Ready</span>
-          </div>
-        </div>
-        <div class="task-item">
-          <div class="task-info">
-            <h4>Final bill generation</h4>
-            <p>Generating final bill without email</p>
-          </div>
-          <div class="task-status">
-            <span class="status-indicator idle"></span>
-            <span class="status-text">Ready</span>
-          </div>
-        </div>
-        <div class="task-item">
-          <div class="task-info">
-            <h4>Invoice preview</h4>
-            <p>Creating invoice preview for validation</p>
-          </div>
-          <div class="task-status">
-            <span class="status-indicator idle"></span>
-            <span class="status-text">Ready</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="card">
-      <div class="section-title">Activity log</div>
+    <section class="card" style="margin-top:24px;">
+      <div class="section-title">Execution progress</div>
       <div class="activity-log">
-        <div class="log-entry">
-          <span class="log-time">14:32:15</span>
-          <span class="log-message">System initialized</span>
-        </div>
-        <div class="log-entry">
-          <span class="log-time">14:32:10</span>
-          <span class="log-message">Connected to Couchbase localhost</span>
-        </div>
-        <div class="log-entry">
-          <span class="log-time">14:32:05</span>
-          <span class="log-message">Billing automation dashboard loaded</span>
-        </div>
+        <div class="log-entry"><span class="log-time">10:28:30</span><span class="log-message">Final bill document deleted successfully — 2001_bsBGI::99887766_0426</span></div>
+        <div class="log-entry"><span class="log-time">10:28:05</span><span class="log-message">Test bill validated successfully — 2001_bsBGI::99887766_0426_TESTBILLRUN</span></div>
+        <div class="log-entry"><span class="log-time">10:27:30</span><span class="log-message">Test bill API triggered successfully — billRunMode=testbillrun</span></div>
+        <div class="log-entry"><span class="log-time">10:26:45</span><span class="log-message">Documents updated successfully — 3001_bsBillAcc, 3002_bsBillPlan</span></div>
+        <div class="log-entry"><span class="log-time">10:25:10</span><span class="log-message">Document validation completed — all required docs found.</span></div>
       </div>
     </section>
 
-    <footer class="footer">
-      Built for Billing Automation demo. Use this page as a prototype while we add live backend integration.
-    </footer>
+    <section class="card" style="margin-top:24px;">
+      <div class="section-title">Related documents</div>
+      <div class="related-list">
+        <div class="related-item"><span>3006_bsUAD::99887766_0426</span><span class="status">Found</span></div>
+        <div class="related-item"><span>3001_bsBillAcc::99887766</span><span class="status">Found</span></div>
+        <div class="related-item"><span>3002_bsBillPlan::99887766</span><span class="status">Found</span></div>
+        <div class="related-item"><span>2001_bsBGI::99887766_0426</span><span class="status">Found</span></div>
+        <div class="related-item"><span>2002_bsUBL::99887766_0426</span><span class="status">Found</span></div>
+      </div>
+      <div class="button-group" style="margin-top:20px;">
+        <button class="primary-button">Refresh Status</button>
+        <button class="secondary-button">Next Step →</button>
+      </div>
+    </section>
+
+    <footer class="footer">Built for Billing Automation demo. Use this page as a prototype while we add live backend integration.</footer>
     <script>
       // Simulate live UI interactions
       document.addEventListener('DOMContentLoaded', function() {
