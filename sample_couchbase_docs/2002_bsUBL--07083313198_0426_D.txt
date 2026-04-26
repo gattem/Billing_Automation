@@ -1,0 +1,49 @@
+{
+  "id": "2002_bsUBL::07083313198_0426",
+  "version": null,
+  "month": 4,
+  "year": 26,
+  "accountId": "111100000339",
+  "basicInformation": {
+    "usageMonth": "042026",
+    "billDate": "2026-05-01",
+    "billDueDate": "2026-05-26",
+    "billPeriod": {
+      "fromDate": "2026-04-01",
+      "toDate": "2026-04-30"
+    },
+    "creditLimit": 0
+  },
+  "lastUpdatedAt": "2026-04-06T02:16:21Z",
+  "chargesSummary": {
+    "unbilledAmount": 0,
+    "unbilledAdjustment": 0,
+    "totalUnbilledAmount": 0,
+    "unbilledTaxAmount": 0,
+    "netUnbilledAmount": 0
+  },
+  "billCalculated": "no",
+  "subscribersInfo": null,
+  "KTAB": "2002_bsUBL",
+  "subscriberPlan": [
+    {
+      "subscriberNumber": "07083313198",
+      "lastRenewedDate": "",
+      "volteSMBPackages": null,
+      "packages": [],
+      "serviceUsageCharges": {
+        "voiceCallService": {
+          "callLocation": {}
+        },
+        "smsService": {
+          "smsLocation": {}
+        },
+        "dataService": {
+          "dataLocation": {}
+        },
+        "summaryUsageCharges": null
+      }
+    }
+  ],
+  "subscriberAdjustment": null
+}

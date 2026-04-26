@@ -1,0 +1,175 @@
+{
+  "id": "LI01336080",
+  "version": null,
+  "accountId": "111100000339",
+  "lastUpdatedAt": null,
+  "customerUserId": "",
+  "discount": {
+    "discountDesc": "",
+    "discountType": null,
+    "currentDiscountNumber": 0,
+    "discountCycle": {
+      "minNumber": null,
+      "maxNumber": null,
+      "billSlab": null
+    }
+  },
+  "invoiceCounter": 326,
+  "recurringCharges": {
+    "packages": [
+      {
+        "packageId": "8a13206fbfb4326c8682a32cd2eadab4",
+        "packageInstanceId": "4c52e411-2788-40e7-9771-db3b6de411fe1715742617853-8a13206fbfb4326c8682a32cd2eadab472c14e46-f446-46d6-a128-9e50f7476b89",
+        "packageDescription": "36 installments fee",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-05-15T00:00:00Z",
+        "packageTerminationDate": "",
+        "packageProrateFlag": "prorate",
+        "packageType": "installment",
+        "packageName": "割賦手数料36回払い",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 36,
+              "packageAmount": 100
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 54,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-05-15T12:10:18Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 23
+      },
+      {
+        "packageId": "69b5c287e5343897b9b1ca798121d0bc",
+        "packageInstanceId": "4c52e411-2788-40e7-9771-db3b6de411fe1715742617853-69b5c287e5343897b9b1ca798121d0bcfb4a3f18-d5d8-4c9a-aa7b-1f3beedb77e1",
+        "packageDescription": "36回払い",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-05-15T00:00:00Z",
+        "packageTerminationDate": "",
+        "packageProrateFlag": "prorate",
+        "packageType": "installment",
+        "packageName": "iPhone 15 128GB ブルー",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 1,
+              "packageAmount": 3665
+            },
+            {
+              "packageSlabMin": 1,
+              "packageSlabMax": 36,
+              "packageAmount": 3661
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 52,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-05-15T12:10:18Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 23
+      }
+    ]
+  },
+  "subscriptionContract": {
+    "subscriptionStartDate": "2024-05-15T12:10:18Z",
+    "subscriptionEndDate": null,
+    "terminationDescription": "",
+    "terminationProrateFlag": "bill_current_cycle_fully",
+    "terminationTerm": {
+      "minNumber": 0,
+      "maxNumber": 0,
+      "terminationAmount": 0
+    },
+    "terminationTax": 0,
+    "autoRenew": {
+      "contractAutoRenewalFlag": false,
+      "renewalCharges": {
+        "amount": 0,
+        "tax": 0
+      },
+      "contractRenewalDuration": 0,
+      "numberOfMonthsExclusionOnRenewal": 0
+    },
+    "serviceInfo": {
+      "serviceID": "07032715200",
+      "serviceType": "MSISDN"
+    }
+  },
+  "KTAB": "3009_bsInstallment"
+}

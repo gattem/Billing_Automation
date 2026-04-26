@@ -1,0 +1,1042 @@
+{
+  "id": "3002_bsBillPlan::07083313198",
+  "version": null,
+  "accountId": "111100000339",
+  "lastUpdatedAt": "2026-04-06T02:16:21Z",
+  "customerUserId": "",
+  "discount": {
+    "discountDesc": "",
+    "discountType": null,
+    "currentDiscountNumber": 0,
+    "discountCycle": {
+      "minNumber": null,
+      "maxNumber": null,
+      "billSlab": null
+    }
+  },
+  "invoiceCounter": 16,
+  "recurringCharges": {
+    "packages": [
+      {
+        "packageId": "1fdade30c89b3f4eb3f8f8297cc7e9b9",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-1fdade30c89b3f4eb3f8f8297cc7e9b9ff5b5913-a06a-4dd2-838e-bd911e676e06",
+        "packageDescription": "留守番電話",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAX_NA",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "留守番電話",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "f5b41edd2ec8324698f08c229f92d426",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-f5b41edd2ec8324698f08c229f92d426bcff568a-8485-4642-a484-5c7a04a294fc",
+        "packageDescription": "国際通話・国際SMS(海外でOS標準の電話アプリ・メッセージアプリ利用時)",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "国際通話・国際SMS(海外でOS標準の電話アプリ・メッセージアプリ利用時)",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "d9aec4afbffa300599ec4e6fcb5fec7c",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-d9aec4afbffa300599ec4e6fcb5fec7c6214d36c-52f8-4efd-9bc2-0b677c29537a",
+        "packageDescription": "割込通話/通話保留",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAX_NA",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "割込通話/通話保留",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "531253bb6e72386ab9224f7abc934dec",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-531253bb6e72386ab9224f7abc934dec95bbe7e9-c1de-4afd-bd4f-5ffe68d712e5",
+        "packageDescription": "テザリング",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAX_NA",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "テザリング",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 17
+      },
+      {
+        "packageId": "e8c2388aeeeb3a48850c3c609fa2df28",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-e8c2388aeeeb3a48850c3c609fa2df284aa791df-01bf-4e2a-a9fd-ba38e1c0eae0",
+        "packageDescription": "Rakuten Link Office",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "Rakuten Link Office",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "6bb12246e9d63b4e9c31bc86c8f2d7b0",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-6bb12246e9d63b4e9c31bc86c8f2d7b0a7b5f887-2f91-4512-be36-2480c09e4910",
+        "packageDescription": "着信SMS通知",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAX_NA",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "着信SMS通知",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "919efb8a05f634ee89c318e6a1dd6159",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-919efb8a05f634ee89c318e6a1dd615972917689-adcf-4a95-9893-9a3261bccc9f",
+        "packageDescription": "国際通話・国際SMS",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-31T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "国際通話・国際SMS",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 2
+      },
+      {
+        "packageId": "a330d2152fb43bcbba8200c4d9e97145",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-a330d2152fb43bcbba8200c4d9e97145f68a6b0b-9124-41bb-99bf-bdca52380578_0",
+        "packageDescription": "TESTCPN-1000004",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": [
+          "6231e90631b4394490696cc506627a3d"
+        ],
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-11-30T00:00:00Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "discount",
+        "packageName": "TESTCPN-1000004",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": -1
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "New_discount",
+          "discountType": "fixed_amount",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 2,
+          "discountCycle": [
+            {
+              "discountMinNumber": 1,
+              "discountMaxNumber": 2,
+              "discount": -10
+            },
+            {
+              "discountMinNumber": 2,
+              "discountMaxNumber": 3,
+              "discount": -5
+            },
+            {
+              "discountMinNumber": 3,
+              "discountMaxNumber": 4,
+              "discount": -15
+            }
+          ]
+        },
+        "oneTimePaymentStatus": false,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 1
+      },
+      {
+        "packageId": "109f3bd57a2237caad1e16930b9ce696",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-109f3bd57a2237caad1e16930b9ce696857b04b8-0a59-4444-8bd4-0c250dbe4116",
+        "packageDescription": "電話リレーサービス料",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "fee",
+        "packageName": "電話リレーサービス料",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 1
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "free_for_the_month",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 37,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 17
+      },
+      {
+        "packageId": "dd1e9c9f2490386086cc91f296112478",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-dd1e9c9f2490386086cc91f2961124788b36cfde-a58b-4a4f-8b40-536b792862e4",
+        "packageDescription": "電話ユニバーサルサービス料",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "fee",
+        "packageName": "電話ユニバーサルサービス料",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 2
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "free_for_the_month",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 36,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 17
+      },
+      {
+        "packageId": "bcc32bdb478c34b29814c8699055b6ff",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-bcc32bdb478c34b29814c8699055b6ff18196e49-8773-487a-aa61-b73dbab8ff5c",
+        "packageDescription": "契約事務手数料",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-11-30T00:00:00Z",
+        "packageTerminationDate": "2024-12-30T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "fee",
+        "packageName": "契約事務手数料",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 3000,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 38,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-11-28T19:40:32Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 0
+      },
+      {
+        "packageId": "b8ba13467be536a8b8d3c005e0c8201f",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-b8ba13467be536a8b8d3c005e0c8201f35b88a8d-12c4-4ca6-8af0-19007f835c71",
+        "packageDescription": "データチャージ 海外ローミング1GB",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2024-12-01T00:00:00Z",
+        "packageTerminationDate": "2025-01-01T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "addon",
+        "packageName": "データチャージ 海外ローミング1GB",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 500,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 19,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-12-01T22:26:09Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 0
+      },
+      {
+        "packageId": "4ce91937be773d41b3c58c2ef23bd763",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-OPT-220004912f322b7-4249-4101-9875-38b3be6f9516",
+        "packageDescription": "国際SMS",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2025-01-01T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "国際SMS",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-12-31T17:00:49Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 15
+      },
+      {
+        "packageId": "8534fede35603f0a9e372b34362763c0",
+        "packageInstanceId": "c809f72e-f835-4e8c-831d-1a21fbf33d0f1732822832618-OPT-220004842ed6626-51d0-4723-9d6f-6710a504ebbf",
+        "packageDescription": "国際SMS(海外でOS標準の電話アプリ・メッセージアプリ利用時)",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "NON_TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2025-01-01T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "vas",
+        "packageName": "国際SMS(海外でOS標準の電話アプリ・メッセージアプリ利用時)",
+        "packageCharges": {
+          "packageTax": 0,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 0,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 0,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-12-31T17:00:49Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 15
+      },
+      {
+        "packageId": "3435141ac0d832dfa8445c3f1bfac3e9",
+        "packageInstanceId": "",
+        "packageDescription": "データ30GB",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2025-01-01T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "prorate",
+        "packageType": "tp",
+        "packageName": "データ30GB",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 999999999,
+              "packageAmount": 2380
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 0,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "bill_current_cycle_fully",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 1,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2024-12-31T17:00:49Z",
+        "packageAutoRenewFlag": false,
+        "packageCurrentSlabCounter": 15
+      },
+      {
+        "packageId": "e7620ed7017136f6b2486316e1c7b495",
+        "packageInstanceId": "f16c7301-e7620ed7017136f6b2486316e1c7b495-d0d8664c",
+        "packageDescription": "ブロードバンドユニバーサルサービス料",
+        "glCode": "",
+        "invoiceIssued": "false",
+        "serviceTaxType": "TAXABLE",
+        "discountedPackages": null,
+        "packageEffectiveStartDate": "2026-03-01T00:00:00Z",
+        "packageTerminationDate": "2026-03-31T14:59:59Z",
+        "packageProrateFlag": "bill_current_cycle_fully",
+        "packageType": "fee",
+        "packageName": "ブロードバンドユニバーサルサービス料",
+        "packageCharges": {
+          "packageTax": 10,
+          "packageSlab": [
+            {
+              "packageSlabMin": 0,
+              "packageSlabMax": 9999999,
+              "packageAmount": 0
+            }
+          ]
+        },
+        "packageDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "currentDiscountCounter": 0,
+          "discountCycle": null
+        },
+        "oneTimePaymentStatus": true,
+        "oneTimeCharges": 2,
+        "oneTimeChargesTax": 10,
+        "oneTimeDiscount": {
+          "discountDescription": "Discount on bill recurring",
+          "discountType": "percentage",
+          "discountInvoiceType": "postinvoice",
+          "discount": 0
+        },
+        "packageTerminationReservation": 0,
+        "packageTermination": {
+          "terminationProrateFlag": "free_for_the_month",
+          "terminationTerm": [
+            {
+              "minNumber": 0,
+              "maxNumber": 0,
+              "terminationAmount": 0
+            }
+          ],
+          "terminationTax": 0,
+          "terminationDesc": "Term"
+        },
+        "packageStatus": "a",
+        "invoiceDisplayOrder": 38,
+        "marketSegment": "",
+        "fulfillmentType": "",
+        "allowanceQuota": null,
+        "packageSubscriptionDate": "2026-03-31T10:12:45Z",
+        "packageAutoRenewFlag": true,
+        "packageCurrentSlabCounter": 0
+      }
+    ]
+  },
+  "subscriptionContract": {
+    "subscriptionStartDate": "2024-11-28T19:40:32Z",
+    "subscriptionEndDate": "2026-03-31T14:59:59Z",
+    "terminationDescription": "",
+    "terminationProrateFlag": "bill_current_cycle_fully",
+    "terminationTerm": {
+      "minNumber": 0,
+      "maxNumber": 0,
+      "terminationAmount": 0
+    },
+    "terminationTax": 0,
+    "autoRenew": {
+      "contractAutoRenewalFlag": false,
+      "renewalCharges": {
+        "amount": 0,
+        "tax": 0
+      },
+      "contractRenewalDuration": 0,
+      "numberOfMonthsExclusionOnRenewal": 0
+    },
+    "serviceInfo": {
+      "serviceID": "07083313198",
+      "serviceType": "MSISDN"
+    }
+  },
+  "KTAB": "3002_bsBillPlan"
+}

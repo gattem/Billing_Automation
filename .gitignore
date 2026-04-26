@@ -1,0 +1,19 @@
+# Maven
+/target
+!/src/main/**
+!/src/test/**
+
+# IntelliJ / VS Code
+/.idea
+*.iml
+*.iws
+.vscode/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+# Spring Boot
+/*.log

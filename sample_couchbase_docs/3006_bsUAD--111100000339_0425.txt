@@ -1,0 +1,26 @@
+{
+  "id": "3006_bsUAD::111100000339_0425",
+  "version": "1743672714883039232",
+  "month": 3,
+  "year": 25,
+  "accountId": "111100000339",
+  "adjustments": null,
+  "payments": [
+    {
+      "paymentDate": "2025-04-31T11:08:44Z",
+      "paymentAmount": 12542,
+      "paymentMode": "BANK_TRANSFER",
+      "paymentRef": "71022503310043436363",
+      "paymentBilled": false
+    }
+  ],
+  "previousMonthBill": {
+    "billAmount": 0,
+    "billDueDate": "2025-03-25T15:00:00Z",
+    "billTax": 0
+  },
+  "suspenseBalance": 0,
+  "invoiceServiceCharges": false,
+  "serviceCharges": null,
+  "KTAB": "3006_bsUAD"
+}

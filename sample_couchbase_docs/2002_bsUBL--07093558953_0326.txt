@@ -1,0 +1,232 @@
+{
+  "id": "2002_bsUBL::07093558953_0326",
+  "version": null,
+  "month": 3,
+  "year": 26,
+  "accountId": "111100000339",
+  "basicInformation": {
+    "usageMonth": "032026",
+    "billDate": "2026-04-06",
+    "billDueDate": "2026-04-26",
+    "billPeriod": {
+      "fromDate": "2026-03-01",
+      "toDate": "2026-03-31"
+    },
+    "creditLimit": 0
+  },
+  "lastUpdatedAt": "2026-04-06T02:16:19Z",
+  "chargesSummary": {
+    "unbilledAmount": 455,
+    "unbilledAdjustment": 0,
+    "totalUnbilledAmount": 455,
+    "unbilledTaxAmount": 45,
+    "netUnbilledAmount": 500
+  },
+  "billCalculated": "yes",
+  "subscribersInfo": null,
+  "KTAB": "2002_bsUBL",
+  "subscriberPlan": [
+    {
+      "subscriberNumber": "07093558953",
+      "lastRenewedDate": "",
+      "volteSMBPackages": [],
+      "packages": [
+        {
+          "packageId": "a2b55956972334c2b13077364c1a5457",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-a2b55956972334c2b13077364c1a545777d19351-12d6-49d3-84cf-5d7a9d462e92",
+          "packageType": "tp",
+          "packageName": "ハンディターミナル用プラン",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 450,
+              "discount": 0,
+              "totalRental": 450,
+              "tax": 45,
+              "netCharges": 495
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "4ce91937be773d41b3c58c2ef23bd763",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-4ce91937be773d41b3c58c2ef23bd763358fc139-f7ed-4a71-8149-cb7f1762c884",
+          "packageType": "vas",
+          "packageName": "国際SMS",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 0,
+              "discount": 0,
+              "totalRental": 0,
+              "tax": 0,
+              "netCharges": 0
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "8534fede35603f0a9e372b34362763c0",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-8534fede35603f0a9e372b34362763c077a8e83a-29cd-4b74-9d6b-0df894dd2ec1",
+          "packageType": "vas",
+          "packageName": "国際SMS(海外でOS標準の電話アプリ・メッセージアプリ利用時)",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 0,
+              "discount": 0,
+              "totalRental": 0,
+              "tax": 0,
+              "netCharges": 0
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "531253bb6e72386ab9224f7abc934dec",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-531253bb6e72386ab9224f7abc934decf2e2a444-0427-4c74-b30c-b77b1da22223",
+          "packageType": "vas",
+          "packageName": "テザリング",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 0,
+              "discount": 0,
+              "totalRental": 0,
+              "tax": 0,
+              "netCharges": 0
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "109f3bd57a2237caad1e16930b9ce696",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-109f3bd57a2237caad1e16930b9ce696a44d1916-0cf0-4a3b-9812-524e484ec30d",
+          "packageType": "fee",
+          "packageName": "電話リレーサービス料",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 1,
+              "discount": 0,
+              "totalRental": 1,
+              "tax": 0,
+              "netCharges": 1
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "dd1e9c9f2490386086cc91f296112478",
+          "packageInstanceId": "9def2efc-9f5f-414e-b5ea-04e06d309f0f1728952574142-dd1e9c9f2490386086cc91f296112478c6e41f4b-511d-4394-b169-d780ac6bd465",
+          "packageType": "fee",
+          "packageName": "電話ユニバーサルサービス料",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 2,
+              "discount": 0,
+              "totalRental": 2,
+              "tax": 0,
+              "netCharges": 2
+            },
+            "oneTime": {
+              "oneTimeCharge": 0,
+              "discount": 0,
+              "totalOneTimeCharge": 0,
+              "tax": 0,
+              "netCharges": 0
+            }
+          }
+        },
+        {
+          "packageId": "e7620ed7017136f6b2486316e1c7b495",
+          "packageInstanceId": "4bac9f12-e7620ed7017136f6b2486316e1c7b495-3ec3e313",
+          "packageType": "fee",
+          "packageName": "ブロードバンドユニバーサルサービス料",
+          "totalCount": 1,
+          "targetedDiscount": null,
+          "rental": {
+            "recurring": {
+              "planCharges": 0,
+              "discount": 0,
+              "totalRental": 0,
+              "tax": 0,
+              "netCharges": 0
+            },
+            "oneTime": {
+              "oneTimeCharge": 2,
+              "discount": 0,
+              "totalOneTimeCharge": 2,
+              "tax": 0,
+              "netCharges": 2
+            }
+          }
+        }
+      ],
+      "serviceUsageCharges": {
+        "voiceCallService": {
+          "callLocation": null
+        },
+        "smsService": {
+          "smsLocation": {}
+        },
+        "dataService": {
+          "dataLocation": {}
+        },
+        "summaryUsageCharges": {
+          "homeUsageCharges": 0,
+          "homeUsageChargesForExcludedNumbersAndRCSFlag": 0,
+          "homeCallDurationForExcludedNumbersAndRCSFlag": 0,
+          "homeVolteSMSDiscountValue": 0,
+          "domesticUsageChargesForExcludedNumbersAndRCSFlag": 0,
+          "domesticCallDurationForExcludedNumbersAndRCSFlag": 0,
+          "domesticVolteSMSDiscountValue": 0,
+          "tax": 0,
+          "netUsageCharge": 0,
+          "domesticUsageCharges": 0,
+          "internationalUsageCharges": 0,
+          "internationalRoaming_MO_MT": 0,
+          "totalUsageCharges": 0
+        }
+      }
+    }
+  ],
+  "subscriberAdjustment": null
+}

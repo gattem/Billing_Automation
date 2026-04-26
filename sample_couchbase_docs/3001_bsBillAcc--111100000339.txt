@@ -1,0 +1,72 @@
+{
+  "id": "3001_bsBillAcc::111100000339",
+  "version": "1774883454583504896",
+  "accountId": "111100000339",
+  "serviceProviderId": "3ae54840597b42be8db7c8e8ba9712db",
+  "customerId": "1b54c3841c9340618d83a3fa04737a1a",
+  "customerUserId": "1b54c3841c9340618d83a3fa04737a1a",
+  "creationDate": "2022-12-19T08:15:00Z",
+  "activationDate": "2022-12-18T23:15:00Z",
+  "modifiedDate": "2026-01-13T09:37:40Z",
+  "state": 1,
+  "stateReason": "BILLING_ACCOUNT_NEWLY_ACTIVATED",
+  "zeroAmountInvoiceCounter": 0,
+  "suppressInvoiceCounter": -1,
+  "contactNumber": "0354326995",
+  "invoiceAddress": "マニュアルタスクチームtest玉川１丁目１４−１楽天クリムゾンハウスtest, 玉川１丁目１４−１楽天クリムゾンハウスtest, 世田谷区test, 新潟県-1110000, 日本",
+  "parentAccountId": "-1",
+  "subsDetails": {
+    "activeSubsDetails": {
+      "07093558953": {
+        "lineTerminationDate": null,
+        "lastUpdateDate": "2024-10-15T00:36:15Z",
+        "lineActivationDate": "2024-10-11T00:00:00Z",
+        "status": "A",
+        "transferOutDate": null,
+        "transferInDate": null
+      }
+    },
+    "cancelledSubsDetails": {
+      "07083313198": {
+        "lineTerminationDate": "2026-03-31T14:59:59Z",
+        "lastUpdateDate": "2026-03-30T15:10:54Z",
+        "lineActivationDate": "2024-11-30T00:00:00Z",
+        "status": "D",
+        "transferOutDate": null,
+        "transferInDate": null
+      },
+      "07032715200": {
+        "lineTerminationDate": "2025-09-11T14:59:59Z",
+        "lastUpdateDate": "2025-09-11T06:10:03Z",
+        "lineActivationDate": "2024-05-15T00:00:00Z",
+        "status": "D",
+        "transferOutDate": null,
+        "transferInDate": null
+      }
+    }
+  },
+  "cancelledInstallmentService": {
+    "activeLineId": {
+      "07032715200_ins": {
+        "lineIdStartDate": "2025-10-01T00:00:00Z",
+        "lineIdEndDate": null,
+        "lineIdStatus": "A"
+      }
+    },
+    "cancelledLineId": {}
+  },
+  "dunningRequired": false,
+  "dunningProfileId": "1",
+  "externalAccountId": "0036-710-9998081",
+  "billGenerationRequired": true,
+  "billCycleId": 1,
+  "paymentCycleId": 1,
+  "currentBillNumber": 0,
+  "bucketId": "3011_bsBillScheduler::1_0",
+  "testBillGenRequired": true,
+  "paymentMode": "BANK_TRANSFER",
+  "affiliatedCompanyCode": "004",
+  "abwFeeExempt": "OTHERS",
+  "lastUpdatedAt": "2026-04-23T20:11:44Z",
+  "KTAB": "3001_bsBillAcc"
+}

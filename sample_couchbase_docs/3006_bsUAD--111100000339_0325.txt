@@ -1,0 +1,43 @@
+{
+  "id": "3006_bsUAD::111100000339_0325",
+  "version": "1743672714883039232",
+  "month": 3,
+  "year": 25,
+  "accountId": "111100000339",
+  "adjustments": [
+    {
+      "adjustmentAmountIncludesTax": false,
+      "adjustmentTaxType": "NON_TAXABLE",
+      "adjustmentTaxValue": 10,
+      "creationDate": "2026-04-22T00:00:00Z",
+      "credit": {
+        "creditAmount": -75528,
+        "creditDescription": "2026年3月利用分調整金",
+        "creditType": "bill_adjustment",
+        "glCode": "0"
+      },
+      "debit": null,
+      "discount": null,
+      "subscriberNumber": null,
+      "transactionRef": "1111000114392026042201"
+    }
+  ],
+  "payments": [
+    {
+      "paymentDate": "2025-03-31T11:08:44Z",
+      "paymentAmount": 75528,
+      "paymentMode": "BANK_TRANSFER",
+      "paymentRef": "71022503310043336363",
+      "paymentBilled": true
+    }
+  ],
+  "previousMonthBill": {
+    "billAmount": 5160023,
+    "billDueDate": "2025-03-25T15:00:00Z",
+    "billTax": 0
+  },
+  "suspenseBalance": 0,
+  "invoiceServiceCharges": false,
+  "serviceCharges": null,
+  "KTAB": "3006_bsUAD"
+}
